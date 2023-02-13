@@ -1,8 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
     const Products = sequelize.define("products", {
-      id: {
-        type: Sequelize.INT
-      },
       title: {
         type: Sequelize.STRING
       },
@@ -11,10 +8,7 @@ module.exports = (sequelize, Sequelize) => {
       },
       published: {
         type: Sequelize.BOOLEAN
-      },
-      year: {
-        type: Sequelize.INT
-      },
+      }
 
     });
   

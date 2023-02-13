@@ -2,9 +2,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const db = require("./app/models/products.model");
 
 const app = express();
+const db = require("./app/models");
+  db.sequelize.sync({ force: true }).then(() => {
+      console.log("Drop and re-sync db.");
+    });
 
 var options4Cors = {
     origin: "http://localhost:1234"
@@ -23,9 +26,7 @@ app.get("/", (request, response) => {
     response.json({ message: "Welcome, enter my realm if you dare." });
   });
 
-  // db.sequelize.sync({ force: true }).then(() => {
-  //     console.log("Drop and re-sync db.");
-  //   });
+// require("./app/routes/products.routes")(app);
 
 //   optional ports
   const PORT = process.env.PORT || 1234;
