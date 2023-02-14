@@ -1,7 +1,7 @@
 Participants:
 
 -Deno Rautenbach(MySQL)
-- (NODE)
+-Luntu Sogeyana (NODE)
 
 Clever Cloud Credentials:
 
